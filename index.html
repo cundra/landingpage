@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .body {
+            font-style: "Jost";
+        }
+    </style>
+    <!-- navbar -->
+    <nav class="navbar fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <div class="col-md-1 col-lg-1 col-xl-1 mx-auto mt-1 ms-4">
+                    <img src="ganendra.png" alt="" class="rounded-circle" width="50" height="50">
+                </div>
+            </a>
+
+            <form class="d-flex me-auto" role="search">
+                <input class="form-control me-2 rounded-5" type="search" placeholder="cari destinasi"
+                    aria-label="Search">
+                <button class="btn btn-outline-success rounded-5" type="submit">cari</button>
+            </form>
+
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Kategori
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#destinasi-wisata">Destinasi Wisata</a></li>
+                                    <li><a class="dropdown-item" href="#kuliner">Kuliner</a></li>
+                                    <li><a class="dropdown-item" href="#transportasi">Transportasi</a></li>
+                                    <li><a class="dropdown-item" href="#hotel">Hotel</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <button class="login rounded-5" id="bukaModal">Login</button>
+                                <div id="modal" class="modal1 ">
+                                    <div class="modal-content" style="width: max-content; height: max-content">
+                                        <span id="tutupModal" class="close" style="margin-right: 20px;">&times;</span>
+                                        <div class="section">
+                                            <div class="container">
+                                                <div class="justify-content-center">
+                                                    <div class="col-12 text-center align-self-center py-5">
+                                                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                                                            <h6 class="login-signup mb-0 pt-0"><span>Log In
+                                                                </span><span>Sign Up</span></h6>
+                                                            <input class="cb checkbox" type="checkbox" id="reg-log"
+                                                                name="reg-log" />
+                                                            <label for="reg-log"></label>
+                                                            <div class="card-3d-wrap mx-auto">
+                                                                <div class="card-3d-wrapper">
+                                                                    <div class="card-front">
+                                                                        <div class="center-wrap">
+                                                                            <div class="jdl section text-center">
+                                                                                <h4 class="mb-4 pb-3">Log In</h4>
+                                                                                <div class="form-group">
+                                                                                    <input type="email"
+                                                                                        class="form-style"
+                                                                                        placeholder="Email">
+                                                                                    <i
+                                                                                        class="input-icon uil uil-at"></i>
+                                                                                </div>
+                                                                                <div class="form-group mt-2">
+                                                                                    <input type="password"
+                                                                                        class="form-style"
+                                                                                        placeholder="Password">
+                                                                                    <i
+                                                                                        class="input-icon uil uil-lock-alt"></i>
+                                                                                </div>
+                                                                                <button
+                                                                                    class="login-signup btn rounded-3 mt-3 py-1 px-3"
+                                                                                    type="submit">Login</button>
+                                                                                <p class="mb-0 mt-4 text-center"><a
+                                                                                        href="http://127.0.0.1:3002/c:/Users/LENOVO/OneDrive/websitegue/OneDrive/Dokumen/signlogin/index.html"
+                                                                                        class="link">Forgot your
+                                                                                        password?</a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-back">
+                                                                        <div class="center-wrap">
+                                                                            <div class="section text-center">
+                                                                                <h4 class="mb-3 pb-3">Sign Up</h4>
+                                                                                <div class="form-group">
+                                                                                    <input type="text"
+                                                                                        class="form-style"
+                                                                                        placeholder="Full Name">
+                                                                                    <i
+                                                                                        class="input-icon uil uil-user"></i>
+                                                                                </div>
+                                                                                <div class="form-group mt-2">
+                                                                                    <input type="tel" class="form-style"
+                                                                                        placeholder="Phone Number"><i
+                                                                                        class="input-icon uil uil-phone"></i>
+                                                                                </div>
+                                                                                <div class="form-group mt-2">
+                                                                                    <input type="email"
+                                                                                        class="form-style"
+                                                                                        placeholder="Email">
+                                                                                    <i
+                                                                                        class="input-icon uil uil-at"></i>
+                                                                                </div>
+                                                                                <div class="form-group mt-2">
+                                                                                    <input type="password"
+                                                                                        class="form-style"
+                                                                                        placeholder="Password">
+                                                                                    <i
+                                                                                        class="input-icon uil uil-lock-alt"></i>
+                                                                                </div>
+                                                                                <button
+                                                                                    class="login-signup btn rounded-3 mt-3 py-1 px-3"
+                                                                                    type="submit">Register</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="modal" id="modal">
+        <p><a href="">X</a></p>
+        <h1 class="label">Login</h1>
+        <form action="" method="get" accept-charset="utf-8">
+            <label for="">Email:</label>
+            <input type="text" placeholder="Masukan Email" id="name">
+            <label for="">Password:</label>
+            <input type="password" placeholder="Masukan Password" id="sandi">
+            <button type="submit" class="btn2">Login</button>
+        </form>
+    </div>
+
+    <section>
+        <style>
+            .px-5.py-5.mb-5.rounded-3 {
+                background-image: url('backgroundterakhir.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        </style>
+        
+        <div class="px-5 py-5 mb-5 rounded-3" >
+            <div class="container-fluid py-5 mt-5 justify-content-center text-center">
+                <h1 class="judul display-5 fw-bold mt-5 px-5" style="color: rgb(255, 255, 255);">Jelajahi Indonesia
+                    dengan pengalaman baru</h1>
+                <p class="judul fs-4 px-5" style="color: rgb(255, 255, 255);">temukan aktvitas yang membuat anda bahagia
+                </p>
+                <div class="container text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-sm-3 mt-5"><button class="menu btn btn-lg w-100 h-100"
+                                type="button"><a href="#destinasi-wisata" style="text-decoration: none; color: rgb(0, 0, 0);">Destinasi wisata</a></button></div>
+                            <div class="col-6 col-sm-3 mt-5"><button class="menu btn btn-lg w-100 h-100"
+                                type="button"><a href="#kuliner" style="text-decoration: none; color: rgb(0, 0, 0)">Kuliner</a></button></div>
+
+                        <div class="w-100 d-none d-md-block"></div>
+
+                        <div class="col-6 col-sm-3 mt-5"><button class="menu btn btn-lg w-100 h-100"
+                            type="button"><a href="#transportasi" style="text-decoration: none; color: rgb(0, 0, 0);">Transportasi</a></button></div>
+                        <div class="col-6 col-sm-3 mt-5"><button class="menu btn btn-lg w-100 h-100"
+                            type="button"><a href="#hotel" style="text-decoration: none; color: rgb(0, 0, 0)">Hotel</a></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DESTINASI -->
+    <section class="destinasi pt-3 pb-5" style="background-color: #A9C191;" id="destinasi-wisata">
+        <h1 class="fs-1 mt-4 ms-5 mb-5" style="color: rgb(255, 255, 255);">Destinasi Wisata</h1>
+        <div id="carouselExampleFade" class="carousel carousel-dark slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(pict/lombok.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Nusa Tenggara Barat</span>
+                                            <h3 class="card-title">Pink Beach</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 170.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(pict/ubud.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Bali</span>
+                                            <h3 class="card-title">Teras Sawah</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 25.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/aerial-shot-wayag-islands-raja-ampat-west-papua-indonesia.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">PAPUA</span>
+                                            <h3 class="card-title">Raja Ampat</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 450.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/Wae-Rebo-Village-Flores-Island-Indonesia.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Nusa Tenggara Timur</span>
+                                            <h3 class="card-title">Wae Rebo</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 100.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/irfannur-diah-PquBsLA8tKM-unsplash.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Sumatera Utara</span>
+                                            <h3 class="card-title">Danau Toba</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 45.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/shot-breathtaking-giant-mountain-covered-forests-gleaming-cloudy-sky.jpg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Jawa Timur</span>
+                                            <h3 class="card-title">Gunung Bromo</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 300.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/tanatoraja.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Sulawesi Selatan</span>
+                                            <h3 class="card-title">Tana Toraja</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 89.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(pict/borobudur.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">jogjakarta</span>
+                                            <h3 class="card-title">Candi Borobudur</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 75.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(pict/padarisland.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Nusa Tenggara Timur</span>
+                                            <h3 class="card-title">Padar Island</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 150.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- KULINER -->
+    <section class="kuliner pt-3 pb-5" id="kuliner">
+        <h1 class="fs-1 mt-4 ms-5 mb-5" style="color: #A9C191">Kuliner</h1>
+        <div id="carouselExampleFade1" class="carousel carousel-dark slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container mb-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(badokan/sate.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Madura</span>
+                                            <h3 class="card-title">Sate Lontong</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 17.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px; width: 18rem;"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/nasikuning.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Banjarmasin</span>
+                                            <h3 class="card-title">Nasi Kuning</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 10.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/nasiliwet.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Yogyakarta</span>
+                                            <h3 class="card-title">Nasi Liwet</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 12.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/ondheondhe.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Jawa Timur</span>
+                                            <h3 class="card-title">Klepon</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 10.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(badokan/cireng.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Jawa Barat</span>
+                                            <h3 class="card-title">Cireng</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 10.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover" style="background-image: url(badokan/gethuk.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Jawa Tengah</span>
+                                            <h3 class="card-title">Gethuk</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 25.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/espodeng.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Jakarta</span>
+                                            <h3 class="card-title">Es Podeng</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 15.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/espisangijo.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Makassar</span>
+                                            <h3 class="card-title">Es Pisang Ijo</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 17.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <section class="cards-wisata">
+                                    <article class="card rounded-top">
+                                        <div class="card-info-hover">
+                                            <i class="ti ti-heart" style="font-size:24px"></i>
+                                        </div>
+                                        <div class="card-img"></div>
+                                        <div class="card-img-hover"
+                                            style="background-image: url(badokan/eslaksamana.jpeg);">
+                                        </div>
+                                        </a>
+                                        <div class="card-info">
+                                            <span class="card-category">Riau</span>
+                                            <h3 class="card-title">Es Laksamana</h3>
+                                            <span class="card-by row justify-content-between">
+                                                <span class="col-7">
+                                                    price
+                                                    <p class="card-admin">Rp 10.000</p>
+                                                </span>
+                                                <a href="" class="col-3 mt-3"><button class="rounded-4 border-0"> <i
+                                                            class="ti ti-plus"></i></button></a>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- TRANSPORTASI -->
+    <section  class="destinasi pt-3 pb-5 ps-5" style="background-color: #A9C191;" id="transportasi">
+        <h1 class="mt-5 mb-5" style="color: rgb(255, 255, 255);">Transportasi</h1>
+        <div class="container text-center mt-5">
+            <div class="row align-items-center m-1">
+                <div class="col-md-3 col-6" style=" color: #A9C191;">
+                    <button onclick="toggleGroup1Element('element1', this)" type="button "
+                        class="tombol w-100 h-100 rounded-5 button1" id="button1">
+                        <i class="ti ti-car" style="font-size:50px "></i>
+                        <p>Sewa Mobil</p>
+                    </button>
+                </div>
+                <div class="col-md-3 col-6">
+                    <button onclick="toggleGroup1Element('element2', this)" type="button"
+                        class="tombol w-100 h-100 rounded-5 button2">
+                        <i class="ti ti-bus" style="font-size:50px"></i>
+                        <p>Tiket Bus</p>
+                    </button>
+                </div>
+                <div class="col-md-3 col-6">
+                    <button onclick="toggleGroup1Element('element3', this)" type="button"
+                        class="tombol w-100 h-100 rounded-5 button3">
+                        <i class="ti ti-train" style="font-size:50px"></i>
+                        <p>Tiket Kereta Api</p>
+                    </button>
+                </div>
+                <div class="col-md-3 col-6">
+                    <button onclick="toggleGroup1Element('element4', this)" type="button"
+                        class="tombol w-100 h-100 rounded-5 button4">
+                        <i class="ti ti-plane" style="font-size:50px; font-weight: 1px;"></i>
+                        <p>Tiket Pesawat</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="element1" class="hidden" style="display: none; margin-top: 5rem;">
+            <div class="input-group justify-content-center mt-5" id="mobil">
+                <div class="col-xs-4 m-3">
+                    <p class="text-start" style="color: aliceblue;">Lokasi rental anda</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-car"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <p class="text-start" style="color: aliceblue;">Tanggal mulai rental</p>
+                    <input class="tombol rounded-3" type="date" style="height: 50%;" />
+                </div>
+                <div class="m-3">
+                    <p class="text-start" style="color: aliceblue;">Waktu mulai</p>
+                    <input class="tombol rounded-3" type="time" style="height: 50%;" />
+                </div>
+                <div class="m-3">
+                    <p class="text-start" style="color: aliceblue;">Tanggal selesai rental</p>
+                    <input class="tombol rounded-3" type="date" style="height: 50%;" />
+                </div>
+                <div class="m-3">
+                    <p class="text-start" style="color: aliceblue;">Waktu selesai</p>
+                    <input class="tombol rounded-3 " type="time" style="height: 50%;" />
+                </div>
+                <div class="m-2">
+                    <br>
+                    <button class="btn btn-outline-secondary rounded-3 mt-4" type="button"><i
+                            class="ti ti-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="element2" class="hidden" style=" margin-top: 5rem;">
+            <div class="input-group justify-content-center mt-5" id="bis">
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Dari</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-bus"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Ke</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-map-pin"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <p class="text-start">Tanggal pergi</p>
+                    <input class="rounded-3" type="date" style="height: 50%;" />
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Jumlah kursi</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-users"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>- Penumpang</option>
+                            <option value="1">1 Penumpang</option>
+                            <option value="2">2 Penumpang</option>
+                            <option value="3">3 Penumpang</option>
+                            <option value="3">4 Penumpang</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-2">
+                    <br>
+                    <button class="btn btn-outline-secondary rounded-3 mt-4" type="button"><i
+                            class="ti ti-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="element3" class="hidden" style=" margin-top: 5rem;">
+            <div class="input-group justify-content-center mt-5" id="train">
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Asal</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-train"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Tujuan</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-map-pin"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <p class="text-start">Tanggal Berangkat</p>
+                    <input class="rounded-3" type="date" style="height: 50%;" />
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Jumlah kursi</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-users"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>- Penumpang</option>
+                            <option value="1">1 Penumpang</option>
+                            <option value="2">2 Penumpang</option>
+                            <option value="3">3 Penumpang</option>
+                            <option value="3">4 Penumpang</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-2">
+                    <br>
+                    <button class="btn btn-outline-secondary rounded-3 mt-4" type="button"><i
+                            class="ti ti-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="element4" class="hidden" style=" margin-top: 5rem;">
+            <div class="input-group justify-content-center mt-5" id="plane">
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Asal</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-plane"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Tujuan</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-map-pin"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>Pilih kota atau wilayah</option>
+                            <option value="1">Jakarta</option>
+                            <option value="2">Bali</option>
+                            <option value="3">Surabaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <p class="text-start">Tanggal Berangkat</p>
+                    <input class="rounded-3" type="date" style="height: 50%;" />
+                </div>
+                <div class="col-xs-4 m-3">
+                    <p class="text-start">Jumlah kursi</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="ti ti-users"></i></span>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option selected>- Penumpang</option>
+                            <option value="1">1 Penumpang</option>
+                            <option value="2">2 Penumpang</option>
+                            <option value="3">3 Penumpang</option>
+                            <option value="3">4 Penumpang</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-2">
+                    <br>
+                    <button class="btn btn-outline-secondary rounded-3 mt-4" type="button"><i
+                            class="ti ti-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOTEL -->
+    <section id="hotel">
+        <h1 class="mb-5 mt-5 ms-5" style="color: #7f9f59;" >Rekomendasi Hotel</h1>
+        <div class="ms-5 mb-5 mt-4">
+            <button class="tombol rounded-5 px-3 py-2" onclick="toggleGroup2Element('element5', this)" type="button"
+                class="btn btn-outline-secondary button5" id="button5">Jakarta</button>
+            <button class="tombol rounded-5 px-3 py-2 button6" onclick="toggleGroup2Element('element6', this)"
+                type="button" class="btn btn-outline-secondary">Bali</button>
+            <button class="tombol rounded-5 px-3 py-2 button7" onclick="toggleGroup2Element('element7', this)"
+                type="button" class="btn btn-outline-secondary">Yogyakarta</button>
+            <button class="tombol rounded-5 px-3 py-2 button8" onclick="toggleGroup2Element('element8', this)"
+                type="button" class="btn btn-outline-secondary">Bogor</button>
+        </div>
+
+        <!-- element5 -->
+        <div id="element5" class="hidden">
+            <div id="carouselElement5" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row justify-content-center">
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta1.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta2.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta3.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta4.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta5.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jakarta6.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JAKARTA</span>
+                                                <h3 class="card-title">Luxury Areos Hotel</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselElement5"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselElement5"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- element 6 -->
+        <div id="element6" class="hidden">
+            <div id="carouselElement6" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row justify-content-center">
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali1.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali2.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali3.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali4.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali5.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali6.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BALI</span>
+                                                <h3 class="card-title">Hotel Artema</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselElement6"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselElement6"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- element7 -->
+        <div id="element7" class="hidden">
+            <div id="carouselElement7" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row justify-content-center">
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jogja1.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jogja2.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jogja3.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jogja4.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/jogja5.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bali8.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JOGJA</span>
+                                                <h3 class="card-title">Hotel Permata</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">cangu, bali</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselElement7"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselElement7"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- element8 -->
+        <div id="element8" class="hidden">
+            <div id="carouselElement8" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row justify-content-center">
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor1.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogor</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor2.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">JBOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogor</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor3.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogor</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor4.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogori</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor5.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogor</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <section class="cards-wisata">
+                                        <article class="card rounded-top">
+                                            <div class="card-img"></div>
+                                            <div class="card-img-hover"
+                                                style="background-image: url(hotel/bogor6.jpeg);">
+                                            </div>
+                                            <div class="card-info">
+                                                <span class="card-category">BOGOR</span>
+                                                <h3 class="card-title">Hotel View Oke</h3>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-7">
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                        <span class="ti ti-star-filled checked"></span>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <p class="keterangan">puncak, bogor</p>
+                                                    </div>
+                                                </div>
+                                                <p class="keterangan ">4,8/5 (57 Review)</p>
+                                                <p>IDR 1.080.579</p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselElement8"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselElement8"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white mt-5" style="background-color: #A9C191">
+        <div class="container p-4 pb-0">
+            <section class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="ganendra.png" alt="" class="w-50 h-70 rounded-circle">
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6>
+                    <p><a class="text-white" href="#">About Us</a></p>
+                    <p><a class="text-white" href="#">Our Service</a></p>
+                    <p><a class="text-white" href="#">Privacy Policy</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Get Help</h6>
+                    <p><a class="text-white" href="#">Your Account</a></p>
+                    <p><a class="text-white" href="#">Settings</a></p>
+                    <p><a class="text-white" href="#">Help</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i>SMK Negeri 2 Surakarta, Jalan Adi Sucipto No. 33, Manahan, Surakarta</p>
+                    <p><i class="fas fa-envelope mr-3"></i> Ganendra@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i>+62 271 636803</p>
+                    <p><i class="fas fa-print mr-3"></i>+62 271 636803</p>
+                </div>
+            </section>
+            <hr class="my-3">
+            <section class="row p-3 pt-0">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <div class="p-3">
+                        © 2020 Copyright:
+                        <a class="text-white" href="https://mdbootstrap.com/">Ganendra</a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <a class="btn btn-outline-light btn-floating m-1 text-white" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 text-white" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 text-white" role="button"><i
+                            class="fab fa-google"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 text-white" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
